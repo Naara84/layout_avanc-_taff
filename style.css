@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px ;
+    box-sizing: border-box;
+  }
+
+body{
+    font-family: Montserrat;
+    background-color:#0a0c1b ;
+    color: white;
+}
+
+/* parent*/
+.parent{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    width: 70rem;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+
+/*parent left*/
+.parent__left{
+    width: 50%;
+    display: flex;
+    
+    
+    flex-direction: column;
+    padding: 3rem 4rem;
+}
+
+/*PARENT LEFT TOP*/
+.parent__left__top{
+    font-weight: bold;
+    font-size: 2.3rem;
+    padding-bottom: 2rem;
+}
+   .parent__left__top span{
+       color: violet;
+   }
+
+/*PARENT LEFT MID*/
+.parent__left__mid{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+} 
+
+/*PARENT LEFT BOT*/
+.parent__left__bot{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*IMAGE*/
+.parent__right{
+    z-index: 1;
+    width: 50%;
+
+}
+.parent__right img{
+    width: 100%;
+    filter: #0a0c1b;
+}
+
+
+@media screen and (max-width: 600px) {
+    .parent{
+        flex-direction: column-reverse;
+        top: 0px;
+        left: 0px;
+        transform: none;
+        text-align: center;
+        
+    }
+    .parent__left__bot{
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .parent__left__top{
+        font-size: 1.7rem;
+        
+    }
+    .parent__left__mid{
+        margin-top: 0.5rem;
+       font-size: 0.9rem;
+       margin-bottom: 1rem;
+    }
+    
+    
+}
